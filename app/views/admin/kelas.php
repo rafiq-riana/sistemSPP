@@ -10,7 +10,7 @@
     <div class="box-body">
     <div class="box">
                 <div class="box-header">
-                <button type="button" class="btn btn-primary btn-sm tambahDataKelas" data-toggle="modal" data-target="#exampleModal">Tambah</button>
+                <button type="button" class="btn btn-primary btn-sm tambahDataKelas">Tambah</button>
                 </div><!-- /.box-header -->
 
                 <div class="box-body">
@@ -30,7 +30,7 @@
                           <td><?= $kelas['id_kelas']; ?></td>
                           <td><?= $kelas['jurusan']; ?> <?= $kelas['nama_kelas']; ?></td>
                           <td>
-                          <a href="#" ><i class="fa fa-fw fa-edit tampilModalEdit" data-id="<?= $kelas['id_kelas']; ?>" data-toggle="modal" data-target="#exampleModal"></i></a>
+                          <a href="#"><i class="fa fa-fw fa-edit tampil-modal-edit" data-id_kelas="<?= $kelas['id_kelas']; ?>" data-nama_kelas="<?= $kelas['nama_kelas'];?>" data-jurusan="<?= $kelas['jurusan']; ?>"></i></a>
                           <a href="#"><i class="fa fa-fw fa-trash-o"></i></a>
                           </td>
                         </tr>

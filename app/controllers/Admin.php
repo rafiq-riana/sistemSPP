@@ -67,7 +67,7 @@ class Admin extends Controller {
     }
 
     public function editKelas(){
-        echo json_encode($this->model('modelKelas')->getKelas($_POST['id']));
+        echo json_encode($this->model('modelKelas')->getKelasById((int) $_POST['id']));
 
         // echo json_encode($this->model('modelKelas')->getKelasById($_POST['id']));
 

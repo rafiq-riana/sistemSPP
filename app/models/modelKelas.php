@@ -16,8 +16,8 @@ class modelKelas {
 
     public function getKelasById($id)
     {
-        $this->db->query('SELECT * FROM ' . $this->tabelkls . ' WHERE id=:id_kelas');
-        $this->db->bind('id', $id);
+        $this->db->query('SELECT * FROM ' . $this->tabelkls . ' WHERE id_kelas=:id_kelas');
+        $this->db->bind('id_kelas', $id);
         return $this->db->single();
     }
 
