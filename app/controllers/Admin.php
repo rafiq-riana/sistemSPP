@@ -34,8 +34,6 @@ class Admin extends Controller {
         }
     }
 
-
-
     public function spp() {
         $data['judul'] = 'Tabel Data SPP';
         $data['SPP'] = $this->model('modelSPP')->getSPP();

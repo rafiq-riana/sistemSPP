@@ -32,7 +32,8 @@ class modelSiswa{
     }
 
     public function getSiswa(){
-        $this->db->query('SELECT s.nisn, s.nama, k.jurusan, k.nama_kelas, sp.nominal, p.jumlah_bayar FROM ' . $this->siswa . ' s JOIN ' . $this->kelas . ' k ON s.id_kelas = k.id_kelas JOIN ' . $this->spp . ' sp ON s.id_spp = sp.id_spp JOIN ' . $this->pembayaran . ' p ON s.nisn = p.nisn');
+        
+        $this->db->query('SELECT s.nisn, s.nama, k.jurusan, k.nama_kelas, sp.nominal, p.jumlah_bayar FROM ' . $this->siswa . ' s INNER JOIN ' . $this->kelas . ' k ON s.id_kelas = k.id_kelas INNER JOIN ' . $this->spp . ' sp ON s.id_spp = sp.id_spp INNER JOIN ' . $this->pembayaran . ' p ON s.nisn = p.nisn');
         return $this->db->resultSet();
     }
 }

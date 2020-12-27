@@ -11,7 +11,7 @@ class modelPetugas{
     public function getPetugas(){
         $this->db->query("SELECT * FROM " . $this->tabelpt);
         return $this->db->resultSet();
-    }   
+    }
 
     public function tambahDataPetugas($data){
         $query = 'INSERT INTO ' . $this->tabelpt . ' VALUES (:id_petugas, :username, :password, :nama_petugas, :level)';

@@ -72,8 +72,8 @@
             <div class="form-group">
               <label>NISN</label>
               <select class="form-control" name="nisn">
-                <?php foreach ($data['siswa'] as $key => $petugas) : ?>
-                <option value="<?= $petugas['nisn']; ?>"><?= $petugas['nisn']; ?> <?= $petugas['nama']; ?></option>
+                <?php foreach ($data['siswa'] as $key => $siswa) : ?>
+                <option value="<?= $siswa['nisn']; ?>"> <?= $siswa['nama']; ?></option>
                 <?php endforeach ?>
               </select>
             </div>            

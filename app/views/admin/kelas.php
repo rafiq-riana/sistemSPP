@@ -29,7 +29,7 @@
                           <td><?= $kelas['id_kelas']; ?></td>
                           <td><?= $kelas['jurusan']; ?> <?= $kelas['nama_kelas']; ?></td>
                           <td>
-                          <a href="#" ><i class="fa fa-fw fa-edit tampilModalEdit" data-id="<?= $kelas['id_kelas']; ?>" data-toggle="modal" data-target="#exampleModal"></i></a>
+                          <a href="#"><i class="fa fa-fw fa-edit tampilModalEdit" data-id_kelas="<?= $kelas['id_kelas']; ?>" data-toggle="modal" data-target="#exampleModal"></i></a>
                           <a href="#"><i class="fa fa-fw fa-trash-o"></i></a>
                           </td>
                         </tr>
