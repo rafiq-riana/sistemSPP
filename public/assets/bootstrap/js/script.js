@@ -1,39 +1,32 @@
 $(function() {
    
     $('.tambahDataKelas').on('click', function(){
-        $('#exampleModal').modal('show')
         $('#formLabelEditKelas').html('Tambah Data Kelas');
         $('.modal-footer button[type=submit]').html('Tambah');
     });
 
-    $('body').on('click', '.tampil-modal-edit', function() {
-        $('#exampleModal').modal('show')
+    $('.tampilModalEdit').on('click', function (){
+
         $('#formLabelEditKelas').html('Ubah Data Kelas');
         $('.modal-footer button[type=submit]').html('Edit');
+        $('.box-body form').attr('action', 'http://localhost/sistemspp/public/admin/editKelas')
 
-        const idKelas = $(this).data('id_kelas');
-        const namaKelas = $(this).data('nama_kelas');
-        const jurusan = $(this).data('jurusan');
 
-        // $('input[name="id_kelas"]').val(idKelas);
-        // $('input[name="nama_kelas"]').val(namaKelas);
-        // $('input[name="jurusan"]').val(jurusan);
+        const id = $(this).data('id');
         // console.log(id);
 
         $.ajax({
-            url: 'http://localhost/sistemspp/public/admin/editKelas',
+            url: 'http://localhost/sistemspp/public/admin/getEditKelas',
             data: {
-                id: idKelas
+                id: id
             },
-            dataType: 'json',
             method: 'post',
-            // dataType: 'json',
+            dataType: 'json',
             success: function (data) {
+                console.log(data);
                 $('#id_kelas').val(data.id_kelas);
                 $('#nama_kelas').val(data.nama_kelas);
                 $('#jurusan').val(data.jurusan);
-                // $('#nama_kelas').val(data.nama_kelas);
-                // $('#jurusan').val(data.jurusan);
             }
         });
 

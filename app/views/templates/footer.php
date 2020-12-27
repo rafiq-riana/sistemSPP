@@ -29,7 +29,6 @@
     <script src="<?= BASEPATH; ?>/assets/dist/js/demo.js" type="text/javascript"></script>
     <!-- page script -->
     <script type="text/javascript">
-    $(document).ready(function() {
       $(function () {
         $("#example1").dataTable();
         $('#example2').dataTable({
@@ -41,7 +40,6 @@
           "bAutoWidth": false
         });
       });
-    })
     </script>
   </body>
 </html>

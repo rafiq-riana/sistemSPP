@@ -34,4 +34,19 @@ class modelKelas {
         $this->db->execute();
         return $this->db->rowCount();
     }
+
+    public function editDataKelas($data){
+
+        $query = 'UPDATE ' . $this->tabelkls . ' SET nama_kelas = :nama_kelas, jurusan = :jurusan WHERE id_kelas = :id_kelas';
+
+        $this->db->query($query);
+
+        $this->db->bind('id_kelas', $data['id_kelas']);
+        $this->db->bind('nama_kelas', $data['nama_kelas']);
+        $this->db->bind('jurusan', $data['jurusan']);
+
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
+
 }
